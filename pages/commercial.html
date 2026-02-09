@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Projects — parArc</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/overlays.css">
+    <link rel="stylesheet" href="../css/modal.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        .page-header {
+            padding: 140px 0 60px;
+            display: block !important;
+        }
+
+        .back-link {
+            color: #888;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.7rem;
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            color: #c4a179;
+            transform: translateX(-5px);
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 10vw, 5rem);
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .projects-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)) !important;
+            gap: 50px !important;
+            padding: 60px 0 !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        .project-card {
+            background: #111 !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 20px !important;
+            padding: 12px;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1) !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px) !important;
+            border-color: #c4a179 !important;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+        }
+
+        .img-box {
+            width: 100%;
+            height: 300px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #3d2d1d, #1a0a11);
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-info {
+            padding: 15px 10px 30px;
+        }
+
+        .card-cat {
+            font-size: 0.6rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #c4a179;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        .modern-pill {
+            display: inline-flex;
+            padding: 12px 28px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.3s;
+            color: #fff;
+        }
+
+        .project-card:hover .modern-pill {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 0 20px;
+            }
+
+            .page-header {
+                padding: 100px 0 40px;
+            }
+
+            .main-title {
+                font-size: clamp(2.5rem, 8vw, 4rem);
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+                padding: 40px 0 !important;
+            }
+
+            .project-card {
+                padding: 10px;
+            }
+
+            .img-box {
+                height: 250px;
+            }
+
+            .card-title {
+                font-size: 1.75rem;
+            }
+
+            .modern-pill {
+                padding: 10px 24px;
+                font-size: 0.65rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grain-overlay"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html#hero">par<span class="red-a">A</span>rc</a>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#about">Studio</a></li>
+                <li><a href="../index.html#philosophy">Philosophy</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <header class="page-header">
+            <a href="../index.html#work" class="back-link">← Folders</a>
+            <h1 class="main-title">Commercial<br><span style="color: #c4a179; font-style: italic;">Urban Synergy</span>
+            </h1>
+        </header>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <article class="project-card"
+                onclick="openDetails('SKYLINE OFFICE', 'A vertical city within a tower. The design prioritizes natural light and communal spaces, breaking the traditional hierarchy of corporate environments.', '2025', 'DUBAI, UAE', '125,000 SQ FT', ['../commercial/KAILASHBHAI/01.png', '../commercial/KAILASHBHAI/02.png', '../commercial/KAILASHBHAI/03.png', '../commercial/KAILASHBHAI/04.png', '../commercial/KAILASHBHAI/05.png', '../commercial/KAILASHBHAI/06.png', '../commercial/KAILASHBHAI/07.png', '../commercial/KAILASHBHAI/08.png', '../commercial/KAILASHBHAI/09.png', '../commercial/KAILASHBHAI/10.png', '../commercial/KAILASHBHAI/11.png', '../commercial/KAILASHBHAI/12.png', '../commercial/KAILASHBHAI/13.png', '../commercial/KAILASHBHAI/14.png', '../commercial/KAILASHBHAI/15.png', '../commercial/KAILASHBHAI/16.png'])">
+                <div class="img-box" style="background-image: url('../commercial/KAILASHBHAI/01.png');"></div>
+                <div class="card-info">
+                    <span class="card-cat">VERTICAL WORKSPACE</span>
+                    <h3 class="card-title">Skyline<br>Office</h3>
+                    <div class="modern-pill">View Project</div>
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card"
+                onclick="openDetails('RETAIL HUB', 'A re-imagining of the shopping experience as a porous, multi-level park. The border between interior commerce and exterior community space is intentionally blurred.', '2024', 'SINGAPORE', '45,000 SQ FT', ['../commercial/SANKETBHAI/01.png', '../commercial/SANKETBHAI/02.png', '../commercial/SANKETBHAI/03.png', '../commercial/SANKETBHAI/04.png', '../commercial/SANKETBHAI/05.png', '../commercial/SANKETBHAI/06.png', '../commercial/SANKETBHAI/07.png', '../commercial/SANKETBHAI/08.png', '../commercial/SANKETBHAI/09.png', '../commercial/SANKETBHAI/10.png', '../commercial/SANKETBHAI/11.png', '../commercial/SANKETBHAI/12.png', '../commercial/SANKETBHAI/01.png'])">
+                <div class="img-box" style="background-image: url('../commercial/SANKETBHAI/01.png');"></div>
+                <div class="card-info">
+                    <span class="card-cat">MIXED-USE RETAIL</span>
+                    <h3 class="card-title">Retail<br>Hub</h3>
+                    <div class="modern-pill">View Project</div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="main-container">
+            <div class="footer-top">
+                <div class="footer-logo">par<span class="red-a">A</span>rc</div>
+                <div class="footer-links">
+                    <a href="../index.html#work">Work</a>
+                    <a href="../index.html#about">Studio</a>
+                    <a href="../index.html#philosophy">Philosophy</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+            </div>
+
+            <!-- Services Slide Show (Marquee) -->
+            <div class="footer-marquee-container">
+                <div class="marquee-row">
+                    <div class="marquee-item"><span>Residential Design</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Urban Planning</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Interior Architecture</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Sustainable Design</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Landscape Design</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Residential Design</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Urban Planning</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Interior Architecture</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Sustainable Design</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Landscape Design</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Slide Show (Marquee Reverse) -->
+            <div class="footer-marquee-container" style="border-top: none;">
+                <div class="marquee-row reverse">
+                    <div class="marquee-item"><span>hello@pararc.com</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>+1 (555) 000-111</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>New York | London | Dubai</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>hello@pararc.com</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>+1 (555) 000-111</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>New York | London | Dubai</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">LinkedIn</a>
+                    <a href="#" target="_blank">Behance</a>
+                </div>
+                <p>&copy; 2026 parArc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MEGA MODAL WITH SLIDER -->
+    <div id="megaModal" class="mega-modal">
+        <div class="modal-body-container" onclick="event.stopPropagation()">
+            <div class="modal-left" id="modalSlider">
+                <div class="slider-btn btn-prev" onclick="changeImage(-1)">←</div>
+                <div class="slider-btn btn-next" onclick="changeImage(1)">→</div>
+                <div id="sliderContainer"></div>
+                <div class="image-counter" id="imgCounter">01 / 04</div>
+            </div>
+            <div class="modal-right">
+                <div class="modal-close" onclick="closeDetails()">✕</div>
+                <span
+                    style="color: #c4a179; font-size: 0.6rem; letter-spacing: 5px; text-transform: uppercase;">COMMERCIAL
+                    ANALYSIS</span>
+                <h2 id="mTitle" class="modal-main-title">TITLE</h2>
+                <div style="width: 50px; height: 1px; background: #c4a179; margin-bottom: 30px;"></div>
+                <p id="mDesc" class="modal-long-desc">Description</p>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Year</div>
+                        <div id="mYear" class="info-val">2025</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Location</div>
+                        <div id="mLoc" class="info-val">Location</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Area</div>
+                        <div id="mArea" class="info-val">4,000 SQ FT</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Status</div>
+                        <div class="info-val">Completed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/projects.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

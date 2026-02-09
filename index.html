@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Award-winning architecture studio crafting extraordinary spaces that shape human experience through innovative design and visionary thinking.">
+    <title>parArc — We Design Space. We Shape Experience.</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/overlays.css">
+
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <style>
+        /* Red A in logo */
+        .loader-logo span,
+        .nav-logo a span,
+        .red-a {
+            color: #ff0000 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cinematic Overlays -->
+    <div class="grain-overlay"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">par<span class="red-a" style="color: #ff0000 !important;">A</span>rc</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <div class="loader-status"
+                style="margin-top: 15px; font-size: 0.6rem; color: #888; letter-spacing: 0.3em; text-transform: uppercase; font-family: 'Inter', sans-serif;">
+                Constructing Experience</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#hero">par<span class="red-a" style="color: #ff0000 !important;">A</span>rc</a>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">Studio</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with 3D Canvas -->
+    <section id="hero" class="hero">
+        <canvas id="canvas3d" class="canvas3d"></canvas>
+
+        <div class="hero-content">
+            <h1 class="hero-title">We Design Space.<br>We Shape Experience.</h1>
+            <p class="hero-subtitle">Architecture that transcends form and function</p>
+            <div class="hero-cta">
+                <a href="#work" class="btn-primary">Explore Our Work</a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="philosophy-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Our Philosophy</span>
+                <h2 class="section-title">Architecture as<br>Spatial Poetry</h2>
+            </div>
+
+            <div class="philosophy-grid">
+                <div class="philosophy-item slide-up" data-parallax="0.5">
+                    <div class="philosophy-number">01</div>
+                    <h3>Contextual Design</h3>
+                    <p>Every space tells a story. We listen to the site, the culture, and the environment to create
+                        architecture that belongs.</p>
+                </div>
+
+                <div class="philosophy-item slide-up" data-parallax="0.3">
+                    <div class="philosophy-number">02</div>
+                    <h3>Material Honesty</h3>
+                    <p>Concrete, glass, steel, and stone speak their own language. We let materials express their true
+                        nature.</p>
+                </div>
+
+                <div class="philosophy-item slide-up" data-parallax="0.4">
+                    <div class="philosophy-number">03</div>
+                    <h3>Light & Shadow</h3>
+                    <p>Architecture is the play of light on form. We choreograph natural light to create living,
+                        breathing spaces.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Folders Section -->
+    <section id="work" class="projects-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Selected Works</span>
+                <h2 class="section-title">Defining Spaces,<br>Shaping Lives</h2>
+            </div>
+
+            <!-- Folder Cards Grid -->
+            <div class="folders-grid">
+                <!-- Residential Folder -->
+                <a href="pages/residential.html" class="folder-card">
+                    <div class="folder-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <div class="folder-info">
+                        <h3 class="folder-title">Residential</h3>
+                        <p class="folder-description">Homes that blend comfort with architectural excellence</p>
+                        <span class="folder-count">3 Projects</span>
+                    </div>
+                    <div class="folder-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Cultural Folder -->
+                <a href="pages/cultural.html" class="folder-card">
+                    <div class="folder-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="folder-info">
+                        <h3 class="folder-title">Cultural</h3>
+                        <p class="folder-description">Spaces that celebrate art, heritage, and community</p>
+                        <span class="folder-count">2 Projects</span>
+                    </div>
+                    <div class="folder-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Commercial Folder -->
+                <a href="pages/commercial.html" class="folder-card">
+                    <div class="folder-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <div class="folder-info">
+                        <h3 class="folder-title">Commercial</h3>
+                        <p class="folder-description">Bold structures that redefine urban landscapes</p>
+                        <span class="folder-count">2 Projects</span>
+                    </div>
+                    <div class="folder-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Public Folder -->
+                <a href="pages/public.html" class="folder-card">
+                    <div class="folder-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div class="folder-info">
+                        <h3 class="folder-title">Public</h3>
+                        <p class="folder-description">Civic architecture that serves and inspires</p>
+                        <span class="folder-count">2 Projects</span>
+                    </div>
+                    <div class="folder-arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content fade-in">
+                    <span class="section-label">The Studio</span>
+                    <h2 class="section-title">Crafting Extraordinary<br>Environments</h2>
+                    <p class="about-text">
+                        Founded on the belief that architecture should elevate the human experience,
+                        our studio approaches each project as a unique opportunity to create spaces
+                        that inspire, challenge, and endure.
+                    </p>
+                    <p class="about-text">
+                        We work at the intersection of art and engineering, combining rigorous technical
+                        expertise with a deep sensitivity to context, culture, and the poetic potential
+                        of materials.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">25+</div>
+                            <div class="stat-label">Awards Won</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual" data-parallax="0.6">
+                    <div class="about-image"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <span class="section-label">Get in Touch</span>
+                    <h2 class="section-title">Let's Create<br>Something Extraordinary</h2>
+                    <p class="contact-text">
+                        Whether you're envisioning a private residence, a cultural institution,
+                        or a transformative urban project, we'd love to hear from you.
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <span class="detail-label">Email</span>
+                            <a href="mailto:studio@pararc.com">studio@pararc.com</a>
+                        </div>
+                        <div class="contact-detail">
+                            <span class="detail-label">Phone</span>
+                            <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        </div>
+                        <div class="contact-detail">
+                            <span class="detail-label">Location</span>
+                            <span>New York, NY</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form slide-up">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="project" placeholder="Project Type">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Tell us about your vision" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">par<span class="red-a">A</span>rc</div>
+                <div class="footer-links">
+                    <a href="#work">Work</a>
+                    <a href="#about">Studio</a>
+                    <a href="#philosophy">Philosophy</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
+            <!-- Services Slide Show (Marquee) -->
+            <div class="footer-marquee-container">
+                <div class="marquee-row">
+                    <div class="marquee-item"><span>Residential Design</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Urban Planning</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Interior Architecture</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Sustainable Design</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Landscape Design</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <!-- Duplicate for infinite effect -->
+                    <div class="marquee-item"><span>Residential Design</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Urban Planning</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Interior Architecture</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Sustainable Design</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>Landscape Design</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Slide Show (Marquee Reverse) -->
+            <div class="footer-marquee-container" style="border-top: none;">
+                <div class="marquee-row reverse">
+                    <div class="marquee-item"><span>hello@pararc.com</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>+1 (555) 000-111</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>New York | London | Dubai</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <!-- Duplicate for infinite effect -->
+                    <div class="marquee-item"><span>hello@pararc.com</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>+1 (555) 000-111</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                    <div class="marquee-item"><span>New York | London | Dubai</span>
+                        <div class="marquee-separator"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-social">
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">LinkedIn</a>
+                    <a href="#" target="_blank">Behance</a>
+                </div>
+                <p>&copy; 2026 parArc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/scene3d.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
