@@ -282,7 +282,7 @@ a {
     left: 0;
     width: 100%;
     padding: var(--space-lg) 0;
-    z-index: 1000;
+    z-index: 10000;
     transition: all var(--transition-base);
 }
 
@@ -993,8 +993,12 @@ section.visible {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
-    z-index: 2000;
+    padding: 20px;
+    /* Increased for better touch target */
+    z-index: 10001;
+    /* Above the nav-menu shadow/background */
+    position: relative;
+    touch-action: manipulation;
 }
 
 .mobile-menu-toggle span {
@@ -1011,11 +1015,14 @@ section.visible {
 }
 
 .mobile-menu-toggle.active span:first-child {
-    transform: rotate(45deg) translate(5px, 6px);
+    transform: rotate(45deg) translate(5px, 5px);
+    background-color: #fff;
+    /* Ensure it's white on the dark menu */
 }
 
 .mobile-menu-toggle.active span:last-child {
-    transform: rotate(-45deg) translate(5px, -6px);
+    transform: rotate(-45deg) translate(5px, -5px);
+    background-color: #fff;
 }
 
 @media (max-width: 1024px) {
@@ -1061,9 +1068,11 @@ section.visible {
         justify-content: center;
         align-items: center;
         transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1500;
+        z-index: 9999 !important;
+        /* Extremely high to beat any page content */
         padding: 2rem;
         border-left: 1px solid var(--color-surface);
+        visibility: visible;
     }
 
     .nav-menu.active {
@@ -1131,15 +1140,55 @@ section.visible {
     }
 
     /* Footer */
-    .footer-content {
-        flex-direction: column;
-        gap: var(--space-xl);
-        text-align: center;
+    .footer {
+        padding: 60px 0 30px;
+    }
+
+    .footer-top {
+        margin-bottom: 40px;
+    }
+
+    .footer-logo {
+        font-size: 2rem;
+        margin-bottom: 30px;
     }
 
     .footer-links {
         flex-direction: column;
         gap: var(--space-md);
+    }
+
+    .footer-links a {
+        font-size: 0.75rem;
+    }
+
+    .marquee-item {
+        font-size: 1rem;
+        padding: 0 20px;
+        letter-spacing: 2px;
+    }
+
+    .marquee-separator {
+        width: 4px;
+        height: 4px;
+        margin: 0 10px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--space-lg);
+        text-align: center;
+        padding-top: 30px;
+        margin-top: 30px;
+    }
+
+    .footer-social {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .footer-social a {
+        font-size: 0.75rem;
     }
 }
 
