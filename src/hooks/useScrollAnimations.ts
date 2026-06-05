@@ -30,15 +30,36 @@ export const useScrollAnimations = () => {
       });
     }, observerOptions);
 
-    // Short timeout to guarantee the DOM has completed rendering
-    const timer = setTimeout(() => {
+    // Helper to find and register fade-in elements that are not yet animated
+    const registerFadeInElements = () => {
       const elements = document.querySelectorAll('.fade-in');
-      elements.forEach((el) => observer.observe(el));
-    }, 150);
+      elements.forEach((el) => {
+        if (!el.classList.contains('visible')) {
+          observer.observe(el);
+        }
+      });
+    };
+
+    // Initial check
+    registerFadeInElements();
+
+    // Set up a MutationObserver to listen for dynamically loaded lazy components
+    const mutationObserver = new MutationObserver(() => {
+      registerFadeInElements();
+    });
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    // Backup timer in case rendering wraps up slightly later
+    const timer = setTimeout(registerFadeInElements, 300);
 
     return () => {
       clearTimeout(timer);
       observer.disconnect();
+      mutationObserver.disconnect();
     };
   }, [location.pathname]); // Re-run on navigation to set up new elements
 };
