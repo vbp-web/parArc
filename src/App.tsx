@@ -26,23 +26,33 @@ const RouteInitializer: React.FC = () => {
     window.scrollTo(0, 0);
     
     const path = window.location.pathname;
-    let title = 'parArc Design Studio | Punit Prajapati';
-    let description = 'parArc Design Studio - Architectural & Interior Design Studio led by Punit Prajapati in Kalol, Gandhinagar, Gujarat.';
+    
+    // Dynamically set canonical link
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', `https://pararcdesignstudio.in${path === '/' ? '' : path}`);
+
+    let title = 'parArc Design Studio | Top Architects & Interior Designers in Gujarat';
+    let description = 'parArc Design Studio is a leading architectural and interior design firm in Kalol, Gandhinagar, and Ahmedabad, Gujarat. Led by Punit Prajapati, we create custom residential, commercial, and landscape designs across India.';
     
     if (path === '/about') {
-      title = 'About Studio | parArc Design Studio';
-      description = 'About parArc Design Studio - Our philosophy, approach, and team. Led by Punit Prajapati.';
+      title = 'About Punit Prajapati & parArc Design Studio | Architects in Gujarat';
+      description = 'Meet Punit Prajapati, founder and principal architect of parArc Design Studio. Discover our design philosophy and approach to residential, commercial, and landscape architecture in India.';
     } else if (path === '/projects') {
-      title = 'Selected Works | parArc Design Studio';
-      description = 'Selected Projects by parArc Design Studio - Portfolio of residential, commercial, interior, and landscape architecture.';
+      title = 'Architectural Portfolio | Featured Projects by parArc Design Studio';
+      description = 'Explore our portfolio of premium architectural and interior design works in Gandhinagar, Kalol, and Ahmedabad. Featuring modern homes, luxury interiors, and commercial spaces.';
     } else if (path === '/services') {
-      title = 'Our Services | parArc Design Studio';
-      description = 'Services offered by parArc Design Studio - Architectural Design, Interior Design, Commercial Projects, and Landscape Architecture.';
+      title = 'Architectural & Interior Design Services | parArc Design Studio';
+      description = 'Professional architecture and interior design services in Gujarat. We specialize in residential design, commercial buildings, institutional plans, and landscape architecture in India.';
     } else if (path === '/contact') {
-      title = 'Get in Touch | parArc Design Studio';
-      description = 'Get in touch with parArc Design Studio. Start a conversation about your project.';
+      title = 'Contact parArc Design Studio | Hire Architects in Gandhinagar & Ahmedabad';
+      description = 'Get in touch with parArc Design Studio in Kalol, Gandhinagar. Hire the best residential, commercial, and landscape architects for your project in Gujarat and India.';
     } else if (path.startsWith('/projects/')) {
-      // Handled dynamically by the ProjectDetail page component, do not overwrite here
+      // Handled dynamically by the ProjectDetail page component, do not overwrite title/description here
       return;
     }
     
