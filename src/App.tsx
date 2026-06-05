@@ -38,6 +38,7 @@ const RouteInitializer: React.FC = () => {
 
     let title = 'parArc Design Studio | Top Architects & Interior Designers in Gujarat';
     let description = 'parArc Design Studio is a leading architectural and interior design firm in Kalol, Gandhinagar, and Ahmedabad, Gujarat. Led by Punit Prajapati, we create custom residential, commercial, and landscape designs across India.';
+    let ogImage = 'https://ik.imagekit.io/StudioparArc/parArc/PHOTO_1.png';
     
     if (path === '/about') {
       title = 'About Punit Prajapati & parArc Design Studio | Architects in Gujarat';
@@ -65,6 +66,26 @@ const RouteInitializer: React.FC = () => {
       document.head.appendChild(metaDescription);
     }
     metaDescription.setAttribute('content', description);
+
+    // Dynamically update OG and Twitter Social cards
+    const updateMeta = (name: string, content: string, isProperty: boolean = false) => {
+      const attribute = isProperty ? 'property' : 'name';
+      let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute(attribute, name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    updateMeta('og:url', `https://pararcdesignstudio.in${path === '/' ? '' : path}`, true);
+    updateMeta('og:title', title, true);
+    updateMeta('og:description', description, true);
+    updateMeta('og:image', ogImage, true);
+    updateMeta('twitter:title', title);
+    updateMeta('twitter:description', description);
+    updateMeta('twitter:image', ogImage);
   }, [window.location.pathname]);
 
   return null;

@@ -34,7 +34,28 @@ export const ProjectDetail: React.FC = () => {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', `${project.overview || project.concept}`);
+    const description = project.overview || project.concept || '';
+    metaDescription.setAttribute('content', description);
+
+    // Dynamically update OG and Twitter Social cards for sharing
+    const updateMeta = (name: string, content: string, isProperty: boolean = false) => {
+      const attribute = isProperty ? 'property' : 'name';
+      let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute(attribute, name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    updateMeta('og:url', `https://pararcdesignstudio.in/projects/${project.id}`, true);
+    updateMeta('og:title', `${project.title} | parArc Design Studio`, true);
+    updateMeta('og:description', description, true);
+    updateMeta('og:image', project.heroImage, true);
+    updateMeta('twitter:title', `${project.title} | parArc Design Studio`);
+    updateMeta('twitter:description', description);
+    updateMeta('twitter:image', project.heroImage);
 
     // SEO JSON-LD Schema
     const scriptId = 'project-jsonld';
