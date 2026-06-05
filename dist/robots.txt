@@ -4,9 +4,7 @@
 User-agent: *
 Allow: /
 
-# Disallow search engine access to non-content files
-Disallow: /css/
-Disallow: /js/
+# Disallow direct audio downloads to save bandwidth
 Disallow: /*.mp3$
 
 # Sitemap location

@@ -21,12 +21,12 @@ const Contact = React.lazy(() => import('./pages/Contact'));
 // Component to handle scrolling to top and triggering intersection observers on route change
 const RouteInitializer: React.FC = () => {
   useScrollAnimations();
-  
+
   React.useEffect(() => {
     window.scrollTo(0, 0);
-    
+
     const path = window.location.pathname;
-    
+
     // Dynamically set canonical link
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
@@ -39,7 +39,7 @@ const RouteInitializer: React.FC = () => {
     let title = 'parArc Design Studio | Top Architects & Interior Designers in Gujarat';
     let description = 'parArc Design Studio is a leading architectural and interior design firm in Kalol, Gandhinagar, and Ahmedabad, Gujarat. Led by Punit Prajapati, we create custom residential, commercial, and landscape designs across India.';
     let ogImage = 'https://ik.imagekit.io/StudioparArc/parArc/PHOTO_1.png';
-    
+
     if (path === '/about') {
       title = 'About Punit Prajapati & parArc Design Studio | Architects in Gujarat';
       description = 'Meet Punit Prajapati, founder and principal architect of parArc Design Studio. Discover our design philosophy and approach to residential, commercial, and landscape architecture in India.';
@@ -56,9 +56,9 @@ const RouteInitializer: React.FC = () => {
       // Handled dynamically by the ProjectDetail page component, do not overwrite title/description here
       return;
     }
-    
+
     document.title = title;
-    
+
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
       metaDescription = document.createElement('meta');
@@ -159,7 +159,7 @@ const AppContent: React.FC = () => {
       <RouteInitializer />
       <CustomCursor />
       <Navbar />
-      
+
       <Suspense fallback={<LoaderPlaceholder />}>
         <main className="main-content">
           <Routes>
@@ -172,10 +172,10 @@ const AppContent: React.FC = () => {
           </Routes>
         </main>
       </Suspense>
-      
+
       {/* Back to Top Button */}
-      <button 
-        className="back-to-top" 
+      <button
+        className="back-to-top"
         aria-label="Back to top"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >

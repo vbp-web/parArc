@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- ===== MAIN PAGES ===== -->
@@ -6,119 +6,111 @@
     <loc>https://pararcdesignstudio.in/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </url>
   <url>
-    <loc>https://pararcdesignstudio.in/html/about.html</loc>
+    <loc>https://pararcdesignstudio.in/about</loc>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </url>
   <url>
-    <loc>https://pararcdesignstudio.in/html/projects.html</loc>
+    <loc>https://pararcdesignstudio.in/projects</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </url>
   <url>
-    <loc>https://pararcdesignstudio.in/html/services.html</loc>
+    <loc>https://pararcdesignstudio.in/services</loc>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </url>
   <url>
-    <loc>https://pararcdesignstudio.in/html/contact.html</loc>
+    <loc>https://pararcdesignstudio.in/contact</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-03-02</lastmod>
-  </url>
-
-  <!-- ===== RESIDENTIAL PROJECT PAGES ===== -->
-  <url>
-    <loc>https://pararcdesignstudio.in/html/details/Residential/CUBE%20HOUSE.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-03-02</lastmod>
-  </url>
-  <url>
-    <loc>https://pararcdesignstudio.in/html/details/Residential/THE%20OVERHANGE%20HOUSE.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-03-02</lastmod>
-  </url>
-  <url>
-    <loc>https://pararcdesignstudio.in/html/details/Residential/THE%20SCREEN%20HOUSE.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-03-02</lastmod>
-  </url>
-  <url>
-    <loc>https://pararcdesignstudio.in/html/details/Residential/THE%20INTERSECT.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-03-02</lastmod>
-  </url>
-  <url>
-    <loc>https://pararcdesignstudio.in/html/details/Residential/OFFSET%20TOWERS.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </url>
 
-  <!-- ===== COMMERCIAL PROJECT PAGES ===== -->
+  <!-- ===== PROJECT DETAIL PAGES ===== -->
   <url>
-    <loc>https://pararcdesignstudio.in/html/details/Commercial/THE%20GLAZE.html</loc>
+    <loc>https://pararcdesignstudio.in/projects/cube-house</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </url>
   <url>
-    <loc>https://pararcdesignstudio.in/html/details/Commercial/FACTORY%20SHED.html</loc>
+    <loc>https://pararcdesignstudio.in/projects/pararc-studio</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-03-02</lastmod>
-  </url>
-
-  <!-- ===== LANDSCAPE PROJECT PAGES ===== -->
-  <url>
-    <loc>https://pararcdesignstudio.in/html/details/Landscape/THE%20WOVEN%20PLAZE.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </url>
   <url>
-    <loc>https://pararcdesignstudio.in/html/details/Landscape/THE%20PILLAR%20PATH.html</loc>
+    <loc>https://pararcdesignstudio.in/projects/the-glaze</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-03-02</lastmod>
-  </url>
-
-  <!-- ===== INTERIORS PROJECT PAGES ===== -->
-  <url>
-    <loc>https://pararcdesignstudio.in/html/details/Interiors/THE%20FRAMED%20ROOM.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </url>
   <url>
-    <loc>https://pararcdesignstudio.in/html/details/Interiors/THE%20GILDED%20QUARRY.html</loc>
+    <loc>https://pararcdesignstudio.in/projects/the-intersect</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </url>
   <url>
-    <loc>https://pararcdesignstudio.in/html/details/Interiors/THE%20TERRA%20CANVAS.html</loc>
+    <loc>https://pararcdesignstudio.in/projects/the-framed-room</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </url>
-
-  <!-- ===== URBAN PROJECT PAGES ===== -->
   <url>
-    <loc>https://pararcdesignstudio.in/html/Urban/project-apartment-design.html</loc>
+    <loc>https://pararcdesignstudio.in/projects/the-gilded-quarry</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://pararcdesignstudio.in/projects/the-woven-plaze</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://pararcdesignstudio.in/projects/factory-shed</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://pararcdesignstudio.in/projects/offset-towers</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://pararcdesignstudio.in/projects/the-overhange-house</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://pararcdesignstudio.in/projects/the-screen-house</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://pararcdesignstudio.in/projects/the-pillar-path</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://pararcdesignstudio.in/projects/the-terra-canvas</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-05</lastmod>
   </url>
 
 </urlset>
