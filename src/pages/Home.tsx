@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight, ArrowLeft } from 'lucide-react';
 import { SoundToggle } from '../components/SoundToggle';
 import { projectsData } from '../data/projects';
+import { getOptimizedImage } from '../utils/image';
 
 // Typewriter Component
 const Typewriter: React.FC<{ text: string; speed?: number }> = ({ text, speed = 80 }) => {
@@ -200,7 +201,7 @@ export const Home: React.FC = () => {
                 <div
                   key={src}
                   className={`hero-slide ${animClass} ${isActive ? 'active' : ''} ${isPrev ? 'prev' : ''}`}
-                  style={{ backgroundImage: `url('${src}')` }}
+                  style={{ backgroundImage: `url('${getOptimizedImage(src, 1600)}')` }}
                 />
               );
             })}
@@ -301,7 +302,7 @@ export const Home: React.FC = () => {
             {[...studioImages, ...studioImages].map((src, index) => (
               <div key={`${src}-${index}`} className="studio-marquee-item">
                 <img
-                  src={src}
+                  src={getOptimizedImage(src, 400)}
                   alt={`parArc Design Studio - ${index + 1}`}
                   loading="lazy"
                 />
@@ -332,7 +333,7 @@ export const Home: React.FC = () => {
             <Link to="/projects/cube-house" className="project-card fade-in">
               <div className="project-image-container">
                 <img
-                  src={projectsData.find(p => p.id === 'cube-house')?.heroImage || '/src/assets/images/PHOTO_1.webp'}
+                  src={getOptimizedImage(projectsData.find(p => p.id === 'cube-house')?.heroImage || '/src/assets/images/PHOTO_1.webp', 800)}
                   alt="Cube House"
                   width="800"
                   height="600"
@@ -359,7 +360,7 @@ export const Home: React.FC = () => {
             <Link to="/projects/the-overhange-house" className="project-card fade-in">
               <div className="project-image-container">
                 <img
-                  src={projectsData.find(p => p.id === 'the-overhange-house')?.heroImage || '/src/assets/images/PHOTO_2.webp'}
+                  src={getOptimizedImage(projectsData.find(p => p.id === 'the-overhange-house')?.heroImage || '/src/assets/images/PHOTO_2.webp', 800)}
                   alt="The Overhange House"
                   width="800"
                   height="600"
@@ -386,7 +387,7 @@ export const Home: React.FC = () => {
             <Link to="/projects/the-terra-canvas" className="project-card fade-in">
               <div className="project-image-container">
                 <img
-                  src={projectsData.find(p => p.id === 'the-terra-canvas')?.heroImage || 'https://ik.imagekit.io/StudioparArc/parArc/INTERIOR/THE%20TERRA%20CANVAS/1.png?updatedAt=1772272268066'}
+                  src={getOptimizedImage(projectsData.find(p => p.id === 'the-terra-canvas')?.heroImage || 'https://ik.imagekit.io/StudioparArc/parArc/INTERIOR/THE%20TERRA%20CANVAS/1.png?updatedAt=1772272268066', 800)}
                   alt="The Terra Canvas"
                   width="800"
                   height="600"
@@ -413,7 +414,7 @@ export const Home: React.FC = () => {
             <Link to="/projects/the-pillar-path" className="project-card fade-in">
               <div className="project-image-container">
                 <img
-                  src={projectsData.find(p => p.id === 'the-pillar-path')?.heroImage || '/src/assets/images/20260525_112322.webp'}
+                  src={getOptimizedImage(projectsData.find(p => p.id === 'the-pillar-path')?.heroImage || '/src/assets/images/20260525_112322.webp', 800)}
                   alt="The Pillar Path"
                   width="800"
                   height="600"
@@ -517,7 +518,7 @@ export const Home: React.FC = () => {
                   >
                     <div className="testimonial-creative-card">
                       <div className="t-image-wrap">
-                        <img src={t.image} alt={t.alt} width="800" height="800" />
+                        <img src={getOptimizedImage(t.image, 800)} alt={t.alt} width="800" height="800" />
                       </div>
                       <div className="t-content-wrap">
                         <div className="t-floating-mark">“</div>

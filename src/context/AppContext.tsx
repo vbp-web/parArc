@@ -16,7 +16,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     // Create audio element globally
     const audio = new Audio('/Warm-Memories-Emotional-Inspiring-Piano(chosic.com).mp3');
     audio.loop = true;
-    audio.preload = 'auto';
+    audio.preload = 'none';
     audioRef.current = audio;
 
     return () => {

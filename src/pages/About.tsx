@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { getOptimizedImage } from '../utils/image';
 
 export const About: React.FC = () => {
   return (
@@ -24,7 +25,7 @@ export const About: React.FC = () => {
           <div className="intro-grid">
             <div className="intro-image fade-in">
               <img
-                src="https://ik.imagekit.io/StudioparArc/parArc/PHOTO_1.png"
+                src={getOptimizedImage('https://ik.imagekit.io/StudioparArc/parArc/PHOTO_1.png', 800)}
                 alt="Punit Prajapati - Architect"
                 width="600"
                 height="800"
@@ -112,7 +113,7 @@ export const About: React.FC = () => {
       <section>
         <div className="process-image fade-in">
           <img
-            src="https://ik.imagekit.io/StudioparArc/parArc/PHOTO_2.png"
+            src={getOptimizedImage('https://ik.imagekit.io/StudioparArc/parArc/PHOTO_2.png', 1600)}
             alt="Architectural process"
             loading="lazy"
             width="1920"

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import { projectsData } from '../data/projects';
+import { getOptimizedImage } from '../utils/image';
 
 export const ProjectDetail: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>();
@@ -123,7 +124,7 @@ export const ProjectDetail: React.FC = () => {
       {/* ========== HERO IMAGE ========== */}
       <section className="hero-image-section">
         <div className="hero-image-container fade-in">
-          <img src={project.heroImage} alt={project.title} />
+          <img src={getOptimizedImage(project.heroImage, 1600)} alt={project.title} />
         </div>
       </section>
 
@@ -186,7 +187,7 @@ export const ProjectDetail: React.FC = () => {
                 return (
                   <div key={index} className={`gallery-item ${isWide ? 'wide' : ''} fade-in`}>
                     <div className="gallery-image">
-                      <img src={image} alt={`${project.title} - View ${index + 2}`} loading="lazy" />
+                      <img src={getOptimizedImage(image, 1200)} alt={`${project.title} - View ${index + 2}`} loading="lazy" />
                     </div>
                   </div>
                 );
@@ -265,7 +266,7 @@ export const ProjectDetail: React.FC = () => {
                     style={{ display: 'block' }}
                   >
                     <div className={`project-image-container ${isWide ? 'wide' : 'tall'}`}>
-                      <img src={p.heroImage} alt={p.title} loading="lazy" />
+                      <img src={getOptimizedImage(p.heroImage, 800)} alt={p.title} loading="lazy" />
                       <div className="project-overlay">
                         <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.2em', display: 'block', marginBottom: '8px' }}>
                           {p.category}

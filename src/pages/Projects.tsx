@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { projectsData } from '../data/projects';
+import { getOptimizedImage } from '../utils/image';
 
 export const Projects: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -80,7 +81,7 @@ export const Projects: React.FC = () => {
                 >
                   <div className={`project-image-container ${isWide ? 'wide' : 'tall'}`}>
                     <img 
-                      src={project.heroImage} 
+                      src={getOptimizedImage(project.heroImage, 800)} 
                       alt={project.title} 
                       loading="lazy" 
                     />
