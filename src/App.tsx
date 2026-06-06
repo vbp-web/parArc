@@ -34,7 +34,7 @@ const RouteInitializer: React.FC = () => {
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', `https://pararcdesignstudio.in${path === '/' ? '' : path}`);
+    canonical.setAttribute('href', `https://www.pararcdesignstudio.in${path === '/' ? '' : path}`);
 
     let title = 'parArc Design Studio | Top Architects & Interior Designers in Gujarat';
     let description = 'parArc Design Studio is a leading architectural and interior design firm in Kalol, Gandhinagar, and Ahmedabad, Gujarat. Led by Punit Prajapati, we create custom residential, commercial, and landscape designs across India.';
@@ -79,7 +79,7 @@ const RouteInitializer: React.FC = () => {
       meta.setAttribute('content', content);
     };
 
-    updateMeta('og:url', `https://pararcdesignstudio.in${path === '/' ? '' : path}`, true);
+    updateMeta('og:url', `https://www.pararcdesignstudio.in${path === '/' ? '' : path}`, true);
     updateMeta('og:title', title, true);
     updateMeta('og:description', description, true);
     updateMeta('og:image', ogImage, true);

@@ -49,7 +49,7 @@ export const ProjectDetail: React.FC = () => {
       meta.setAttribute('content', content);
     };
 
-    updateMeta('og:url', `https://pararcdesignstudio.in/projects/${project.id}`, true);
+    updateMeta('og:url', `https://www.pararcdesignstudio.in/projects/${project.id}`, true);
     updateMeta('og:title', `${project.title} | parArc Design Studio`, true);
     updateMeta('og:description', description, true);
     updateMeta('og:image', project.heroImage, true);
@@ -74,7 +74,7 @@ export const ProjectDetail: React.FC = () => {
       "creator": {
         "@type": "Organization",
         "name": "parArc Design Studio",
-        "url": "https://pararcdesignstudio.in"
+        "url": "https://www.pararcdesignstudio.in"
       },
       "description": project.overview,
       "image": project.heroImage,

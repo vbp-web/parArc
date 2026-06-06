@@ -1,5 +1,5 @@
 # robots.txt — parArc Design Studio
-# https://pararcdesignstudio.in/
+# https://www.pararcdesignstudio.in/
 
 User-agent: *
 Allow: /
@@ -8,4 +8,4 @@ Allow: /
 Disallow: /*.mp3$
 
 # Sitemap location
-Sitemap: https://pararcdesignstudio.in/sitemap.xml
+Sitemap: https://www.pararcdesignstudio.in/sitemap.xml
