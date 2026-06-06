@@ -1,0 +1,1 @@
+const t=(t,n=1200)=>{if(!t)return"";if(!t.includes("imagekit.io"))return t;if(t.includes("tr="))return t;const c=t.includes("?")?"&":"?";return"".concat(t).concat(c,"tr=w-").concat(n,",q-80,f-auto")};export{t as g};

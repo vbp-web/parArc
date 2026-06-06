@@ -1,14 +1,19 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import legacy from '@vitejs/plugin-legacy';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    legacy({
+      targets: ['chrome >= 47', 'defaults', 'not IE 11'],
+    }),
+  ],
   server: {
     host: true,
   },
   build: {
-    target: 'es2015',
     outDir: 'dist',
     sourcemap: false,
     minify: 'terser',

@@ -1,0 +1,1 @@
+System.register([],function(t,e){"use strict";return{execute:function(){t("g",function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:1200;if(!t)return"";if(!t.includes("imagekit.io"))return t;if(t.includes("tr="))return t;var r=t.includes("?")?"&":"?";return`${t}${r}tr=w-${e},q-80,f-auto`})}}});

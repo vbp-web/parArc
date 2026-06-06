@@ -80,10 +80,10 @@ export const Projects: React.FC = () => {
                   }}
                 >
                   <div className={`project-image-container ${isWide ? 'wide' : 'tall'}`}>
-                    <img 
-                      src={getOptimizedImage(project.heroImage, 800)} 
-                      alt={project.title} 
-                      loading="lazy" 
+                    <img
+                      src={getOptimizedImage(project.heroImage, 800)}
+                      alt={project.title}
+                      loading="lazy"
                     />
                     <div className="project-overlay">
                       <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.2em', display: 'block', marginBottom: '8px' }}>
