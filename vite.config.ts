@@ -8,6 +8,7 @@ export default defineConfig({
     host: true,
   },
   build: {
+    target: 'es2015',
     outDir: 'dist',
     sourcemap: false,
     minify: 'terser',
