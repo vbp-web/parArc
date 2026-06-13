@@ -126,11 +126,7 @@ export const projectsData: Project[] = [
       "https://ik.imagekit.io/StudioparArc/parArc/INTERIOR/THE%20FRAMED%20ROOM/5.png?updatedAt=1772272371019",
       "https://ik.imagekit.io/StudioparArc/parArc/INTERIOR/THE%20FRAMED%20ROOM/6.png?updatedAt=1772272373686"
     ],
-    "testimonial": {
-      "quote": "Thanks to parArc Design Studio's visionary layout and rich material choices, every corner of our studio acts as a stunning, perfectly lit backdrop for our shoots.",
-      "author": "Rushi Purohit",
-      "role": "Owner, The Framed Room"
-    }
+    "testimonial": null
   },
   {
     "id": "the-gilded-quarry",
