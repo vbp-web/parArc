@@ -157,14 +157,6 @@ export const Home: React.FC = () => {
       role: "Owner, The Gilded Quarry",
       image: "https://ik.imagekit.io/StudioparArc/parArc/INTERIOR/THE%20GILDED%20QUARRY/1.png?updatedAt=1772272311407",
       alt: "The Gilded Quarry"
-    },
-    {
-      id: 8,
-      quote: "Thanks to parArc Design Studio's visionary layout and rich material choices, every corner of our studio acts as a stunning, perfectly lit backdrop for our shoots.",
-      author: "Rushi Purohit",
-      role: "Owner, The Framed Room",
-      image: "https://ik.imagekit.io/StudioparArc/parArc/INTERIOR/THE%20FRAMED%20ROOM/1.png?updatedAt=1772272371661",
-      alt: "The Framed Room"
     }
   ];
 
